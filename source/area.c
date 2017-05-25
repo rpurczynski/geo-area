@@ -1,4 +1,4 @@
-#include <math.h>
+#include "area.h"
 
 double polygonArea(double *xCoords, double *yCoords, int points)
 {
@@ -13,3 +13,4 @@ double polygonArea(double *xCoords, double *yCoords, int points)
 
   return area*0.5;
 }
+

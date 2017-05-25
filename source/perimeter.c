@@ -1,24 +1,4 @@
-#include <stdio.h>
-#include <math.h>
-#include <stdbool.h>
-
-#define CIRCLE_RADIANS 6.283185307179586476925286766559
-#define MAX_SEGS 1000
-
-double angleOf(double x, double y);
-bool lineSegmentIntersection(double Ax, double Ay,double Bx, double By,double Cx, double Cy,double Dx, double Dy,double *X, double *Y);
-bool polygonPerimeter(double *x, double *y, int *corners, double *newX, double *newY);
-
-double angleOf(double x, double y)
-{
-  double  dist=sqrt(x*x+y*y);
-
-  if (y>=0.0) {
-    return acos(x/dist);
-  } else {
-    return acos(-x/dist)+0.5*CIRCLE_RADIANS;
-  }
-}
+#include "perimeter.h"
 
 bool polygonPerimeter(double *x, double *y, int *corners, double *newX, double *newY)
 {
@@ -138,48 +118,3 @@ bool polygonPerimeter(double *x, double *y, int *corners, double *newX, double *
   }
 }
 
-bool lineSegmentIntersection(double Ax, double Ay,double Bx, double By,double Cx, double Cy,double Dx, double Dy,double *X, double *Y) {
-
-  double distAB, theCos, theSin, newX, ABpos;
-
-  if (Ax==Bx && Ay==By || Cx==Dx && Cy==Dy) {
-    return false;
-  }
-
-  if (Ax==Cx && Ay==Cy || Bx==Cx && By==Cy ||  Ax==Dx && Ay==Dy || Bx==Dx && By==Dy) {
-    return false;
-  }
-
-  Bx-=Ax;
-  By-=Ay;
-  Cx-=Ax;
-  Cy-=Ay;
-  Dx-=Ax;
-  Dy-=Ay;
-
-  distAB=sqrt(Bx*Bx+By*By);
-
-  theCos=Bx/distAB;
-  theSin=By/distAB;
-  newX=Cx*theCos+Cy*theSin;
-  Cy=Cy*theCos-Cx*theSin;
-  Cx=newX;
-  newX=Dx*theCos+Dy*theSin;
-  Dy=Dy*theCos-Dx*theSin;
-  Dx=newX;
-
-  if (Cy<0.0 && Dy<0.0 || Cy>=0.0 && Dy>=0.0) {
-    return false;
-  }
-
-  ABpos=Dx+(Cx-Dx)*Dy/(Dy-Cy);
-
-  if (ABpos<0.0 || ABpos>distAB) {
-    return false;
-  }
-
-  *X=Ax+ABpos*theCos;
-  *Y=Ay+ABpos*theSin;
-
-  return true;
-}
