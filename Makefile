@@ -5,7 +5,7 @@ LFLAGS=-lm
 SRC_DIR=source
 OBJS=$(SRC_DIR)/angle.o $(SRC_DIR)/area.o $(SRC_DIR)/edge_intersection.o $(SRC_DIR)/perimeter.o $(SRC_DIR)/main.o
 
-all: clean polygon
+all: polygon
 
 polygon: $(OBJS)
 	$(CC) $^ -o $@ $(LFLAGS)
