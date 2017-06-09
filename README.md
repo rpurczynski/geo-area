@@ -66,6 +66,7 @@ make
 To build on Windows type:
 ```
 cmake -G "MinGW Makefiles" ./CMakeLists.txt
+mingw32-make
 ```
 
 To clean project directory type:
