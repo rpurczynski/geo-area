@@ -19,4 +19,4 @@ add_test (geo-area-test-bow32 geo-area 2:2 2:10 10:2 10:10)
 set_tests_properties (geo-area-test-bow32 PROPERTIES PASS_REGULAR_EXPRESSION "Normalized area 32.000000")
 
 add_test (geo-area-test-usage geo-area)
-set_tests_properties (geo-area-test-usage PROPERTIES PASS_REGULAR_EXPRESSION "Usage: *")
+set_tests_properties (geo-area-test-usage PROPERTIES PASS_REGULAR_EXPRESSION "Podaj: *")

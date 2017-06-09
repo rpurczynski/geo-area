@@ -47,16 +47,16 @@ int main(int argc, char *argv[]) {
     free(yc);
 
     if (area != -1) {
-        printf("Normalized area %f\n", area);
+        printf("Obliczona powierzchnia %f\n", area);
     } else {
-        printf("Error, polygon sould have at least three different corners\n");
+        printf("Error, poligon powinien posiadac przynajmniej trzy wierzcholki\n");
         return -1;
     }
     return 0;
 }
 
 void printUsage(char* command) {
-    printf("Usage: %s X0:Y0 ... Xn:Yn\n", command);
+    printf("Podaj: %s X0:Y0 ... Xn:Yn\n", command);
 }
 
 char** stringSplit(char* subject, const char delimiter, int expectedParts) {
