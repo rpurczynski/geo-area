@@ -3,7 +3,7 @@
 
 ## Scope and content
 Software requirements specification:
-...
+```
 
 <1> Introduction
 a. Program zostanie wykonany na zaliczenie przedmiotu. G³ównym celem bedzie liczenie powierzchni dowolnej figury.
