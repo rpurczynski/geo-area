@@ -2,7 +2,7 @@
 ### Area measure tool
 
 ## Scope and content
-Software requirements specification
+Software requirements specification:
 ...
 
 <1> Introduction
@@ -28,7 +28,7 @@ b. Wymagania mog¹ byæ scharakteryzowane, na przyk³ad istotne lub nie.
 a. Program bedzie wylicza³ powierzchnie po podaniu wspó³rzednych minimum trzech wierzcho³ków
 b. W przypadku nie podania odpowiedniej iloœci wierzcho³ków ( mniej ni¿ 3), uzytkownik otrzyma komunikat o b³êdzie.
 c. Dane wejsciowe bed¹ wprowadzone z klawiatury wraz z plikiem wykonywalnym
-d. Para wejsciowa wsó³rzednych wierzcho³ka bêdzie wygladac wg wzorca: X0:Y0 ... Xn:Yn
+d. Para wejsciowa wsó³rzednych wierzcho³ka bêdzie wygladac wg wzorca: "X0:Y0 ... Xn:Yn"
 e. Liczby wprowadzone jako wspólrzedne wierzcho³ków moga byæ w postaci dziesiêtnej. Separatorem dla liczb jest znak kropki (".").
 f. Po wprowadzeniu danych i zatwierdzeniu przyciskiem Enter na ekranie wyswietli sie komunikat: "Obliczona powierzchnia:" i wynik dzia³ania programu.
 g. Wynik bêdzie wyswietlany w formie liczby zmiennoprzecinkowej z dok³adnoœcia do 6 miejsc po przecinku.
